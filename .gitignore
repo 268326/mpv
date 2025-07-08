@@ -1,0 +1,23 @@
+# 只忽略真正的临时文件和缓存
+# Windows 系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# MPV 缓存和临时文件
+portable_config/_cache/
+portable_config/watch_later/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# Git 自身
+.git/
