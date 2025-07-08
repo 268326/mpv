@@ -1,29 +1,25 @@
-# mpv播放器折腾记录
+# MPV 便携版配置包
 
-_从萌新到大白，<s>用前嫌麻烦</s> 用后真香_  
-[命令行播放器 mpv](https://github.com/mpv-player/mpv) 的设置历史存档（windows10/11）
+## 说明
+这是一个个人使用的 MPV 便携版配置包，整合了多个开源项目的配置和脚本。
 
-前往上方的 [**📖Wiki 维基版块📖**](../../wiki) 查看文档导航和关于子目录中各文件的说明
+**⚠️ 重要声明：本项目仅供个人学习和使用，不得用于商业用途。**
 
-如有自定义的需求，建议在原档文件基础上修改；如果另自行新建文本，注意编码最好为 **UTF-8** ，换行符为 **LF** ，否则mpv可能无法识别  
+## 许可证说明
+- 本项目仅供个人学习和使用，不得用于商业用途
+- 所有第三方组件均遵循其原始许可证
+- MPV 遵循 GPL v2+ 许可证
+- 相关脚本和配置文件遵循其各自的开源许可证
+- 如有任何版权问题，请及时联系删除
 
-从零开始接触mpv且不使用懒人包的话可参考
-- [《win10/11 mpv播放器通用教程》](https://hooke007.github.io/unofficial/mpv_start.html)  
+## 版权归属
+本项目整合了多个开源项目，所有版权归原作者所有：
+- MPV 播放器 © MPV Team
+- 各配置文件和脚本 © 各自原作者
+- 第三方库和工具 © 各自版权所有者
 
-## 主要分支
-
-- [**main**](https://github.com/hooke007/MPV_lazy/tree/main) 当前使用与曾使用过的全部文件（附详细说明、持续维护）
-- [**lite**](https://github.com/hooke007/MPV_lazy/tree/lite) 懒人包的核心设置同步
-
-## 懒人包 mpv-lazy
-
-懒人包是解压即可使用的完整解决方案  
-使用前务必完整阅读 [《新快速说明》](https://github.com/hooke007/MPV_lazy/discussions/194)  
-
-下载请见 [**🏷发布版块 Releases🏷**](../../releases)  
-反馈前往 [**💬讨论版块 Discussions🗨️**](../../discussions)
-
-## 预览
-
-![](https://github.com/hooke007/MPV_lazy/blob/lite/Temp/mpv-lazy-lite.png)  
-![](https://github.com/hooke007/MPV_lazy/blob/obs/Temp/IMG/index-%E6%96%B0%E7%95%8C%E9%9D%A2%E4%B8%8E%E4%B8%8A%E4%B8%8B%E6%96%87%E8%8F%9C%E5%8D%95.webp)
+## 免责声明
+- 本配置包整合了多个开源项目，仅供个人使用
+- 使用者应自行承担使用风险
+- 如有版权问题，请联系删除
+- 不对任何直接或间接损失承担责任

@@ -1,0 +1,33 @@
+# 许可证说明
+
+本项目是多个开源项目的整合包，各组件遵循其原始许可证：
+
+## 主要组件许可证
+
+### MPV Media Player
+- 许可证：GPL v2+
+- 项目地址：https://mpv.io/
+- 许可证详情：https://github.com/mpv-player/mpv/blob/master/LICENSE.GPL
+
+### 配置文件和脚本
+- 大部分配置文件和脚本来自开源社区
+- 遵循各自项目的开源许可证
+- 主要参考项目：
+  - mpv_lazy: https://github.com/hooke007/MPV_lazy
+  - uosc: https://github.com/tomasklaen/uosc
+  - 其他社区贡献的脚本和配置
+
+### Python 组件
+- Python 运行时：Python Software Foundation License
+- NumPy：BSD License
+- ONNX：Apache License 2.0
+- 其他依赖库遵循各自许可证
+
+## 使用条款
+1. 本整合包仅供个人学习和使用
+2. 不得用于商业用途
+3. 使用者需遵循各组件的原始许可证条款
+4. 如有版权争议，请联系删除相关内容
+
+## 免责声明
+本项目维护者不对任何直接或间接的损失承担责任。使用本软件包即表示您同意承担所有使用风险。
