@@ -940,6 +940,7 @@ bind_command('subtitles', create_select_tracklist_type_menu_opener({
 	secondary = {prop = 'secondary-sid', icon = 'vertical_align_top', enable_prop = 'secondary-sub-visibility'},
 	load_command = 'script-binding uosc/load-subtitles',
 	download_command = 'script-binding uosc/download-subtitles',
+	assrt_command = 'script-message-to sub_assrt sub-assrt',
 }))
 --bind_command('subtitles', create_select_tracklist_type_menu_opener({ -- 旧版次字幕菜单
 --	title = ulang._sid_sec_submenu_title,

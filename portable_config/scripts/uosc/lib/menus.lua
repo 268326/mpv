@@ -212,15 +212,21 @@ function create_select_tracklist_type_menu_opener(opts)
 		local items = {}
 
 		if opts.load_command then
+			local actions = {}
+			if opts.download_command then
+				actions[#actions + 1] = {name = 'download', icon = 'language', label = ulang._dlsub_searchol}
+			end
+			if opts.assrt_command then
+				actions[#actions + 1] = {name = 'assrt', icon = 'search', label = 'ASSRT搜索'}
+			end
+			
 			items[#items + 1] = {
 				title = ulang._submenu_import,
 				bold = true,
 				italic = true,
 				hint = ulang._submenu_load_file,
 				value = '{load}',
-				actions = opts.download_command
-					and {{name = 'download', icon = 'language', label = ulang._dlsub_searchol}}
-					or nil,
+				actions = #actions > 0 and actions or nil,
 			}
 		end
 		if #items > 0 then
@@ -309,7 +315,16 @@ function create_select_tracklist_type_menu_opener(opts)
 	---@param event MenuEventActivate
 	local function handle_activate(event)
 		if event.value == '{load}' then
-			mp.command(event.action == 'download' and opts.download_command or opts.load_command)
+			if event.action == 'download' then
+				msg.info('[uosc] 调用 OpenSubtitles 字幕下载: ' .. opts.download_command)
+				mp.command(opts.download_command)
+			elseif event.action == 'assrt' then
+				msg.info('[uosc] 调用 ASSRT 字幕搜索: ' .. opts.assrt_command)
+				mp.command(opts.assrt_command)
+			else
+				msg.info('[uosc] 调用字幕加载: ' .. opts.load_command)
+				mp.command(opts.load_command)
+			end
 		else
 			if snd and (event.action == 'as_secondary' or event.modifiers == 'shift') then
 				local _, snd_track_index = get_props()
@@ -884,11 +899,13 @@ function create_track_loader_menu_opener(opts)
 end
 
 function open_subtitle_downloader()
+	msg.info("[uosc] 开始 OpenSubtitles 字幕下载功能")
 	local menu_type = 'download-subtitles'
 	---@type Menu
 	local menu
 
 	if Menu:is_open(menu_type) then
+		msg.info("[uosc] 字幕下载菜单已打开，关闭中...")
 		Menu:close()
 		return
 	end
@@ -899,6 +916,7 @@ function open_subtitle_downloader()
 	if state.path then
 		if is_protocol(state.path) then
 			if not is_protocol(state.title) then search_suggestion = state.title end
+			msg.info("[uosc] 网络视频，搜索建议: " .. (search_suggestion or "无"))
 		else
 			local serialized_path = serialize_path(state.path)
 			if serialized_path then

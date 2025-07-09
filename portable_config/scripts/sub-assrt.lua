@@ -4,6 +4,13 @@
     * AUTHORS: dyphire
     * License: MIT
     * link: https://github.com/dyphire/mpv-sub-assrt
+    * 
+    * 修改说明：
+    * 1. 与uosc的download-subtitles功能共存
+    * 2. 本地视频：字幕保存到视频文件旁边
+    * 3. 网络视频：字幕保存到临时目录
+    * 4. 在uosc字幕菜单中添加ASSRT搜索按钮
+    * 5. 不添加额外的快捷键绑定
 ]]
 
 local utils = require "mp.utils"
@@ -310,17 +317,36 @@ local function download_file(url, fname)
     local filename = mp.get_property("filename/no-ext")
     local ext = fname:match('%.([^%.]+)$'):lower()
 
-    if is_protocol(path) then
-        sub_path = utils.join_path(TEMP_DIR, fname)
-    else
+    msg.info("[ASSRT] 开始下载字幕文件: " .. fname)
+    msg.info("[ASSRT] 下载链接: " .. url)
+    msg.info("[ASSRT] 当前视频路径: " .. (path or "无"))
+
+    -- 判断是否为本地文件
+    local is_local_file = not is_protocol(path)
+    
+    if is_local_file then
+        -- 本地视频：保存到视频文件旁边
         local dir = utils.split_path(normalize(path))
         sub_path = utils.join_path(dir, filename .. ".assrt." .. ext)
+        msg.info("[ASSRT] 本地视频，字幕保存到: " .. sub_path)
+    else
+        -- 网络视频：保存到临时目录
+        sub_path = utils.join_path(TEMP_DIR, fname)
+        msg.info("[ASSRT] 网络视频，字幕保存到临时目录: " .. sub_path)
     end
 
     local message = "正在下载字幕..."
     local type = "download_subtitle"
     local title = "字幕下载菜单"
     local footnote = "使用 / 打开筛选"
+    
+    -- 根据视频类型显示不同的下载信息
+    if is_local_file then
+        message = "正在下载字幕到视频文件夹..."
+    else
+        message = "正在下载字幕到临时文件夹..."
+    end
+    
     if uosc_available then
         update_menu_uosc(type, title, message, footnote)
     else
@@ -332,11 +358,13 @@ local function download_file(url, fname)
         table.insert(cmd, '-x')
         table.insert(cmd, o.proxy)
     end
+    msg.info("[ASSRT] 执行下载命令: " .. table.concat(cmd, " "))
     local res = mp.command_native({ name = "subprocess", capture_stdout = true, capture_stderr = true, args = cmd })
     if res.status == 0 then
         if file_exists(sub_path) then
+            msg.info("[ASSRT] 字幕文件下载成功，正在载入: " .. sub_path)
             append_sub(sub_path)
-            local message = "字幕下载完成, 已载入"
+            local message = is_local_file and "字幕下载完成，已保存到视频文件夹并载入" or "字幕下载完成，已载入"
             if uosc_available then
                 update_menu_uosc(type, title, message, footnote)
                 -- 下载完字幕1.5秒后关闭面板
@@ -346,21 +374,24 @@ local function download_file(url, fname)
             else
                 mp.osd_message(message, 3)
             end
-            msg.info("Subtitle downloaded: " .. sub_path)
+            msg.info("[ASSRT] 字幕载入完成: " .. sub_path)
+        else
+            msg.error("[ASSRT] 字幕文件下载失败，文件不存在: " .. sub_path)
         end
     else
+        msg.error("[ASSRT] 字幕下载失败，curl 错误: " .. (res.stderr or "未知错误"))
         local message = "字幕下载失败，查看控制台获取更多信息"
         if uosc_available then
             update_menu_uosc(type, title, message, footnote)
         else
             mp.osd_message(message, 3)
         end
-        msg.error("Failed to download file: " .. res.stderr)
         return nil
     end
 end
 
 local function fetch_subtitle_details(sub_id)
+    msg.info("[ASSRT] 开始获取字幕详细信息，ID: " .. (sub_id or "未知"))
     local message = "正在加载字幕详细信息..."
     local type = "subtitle_details"
     local title = "字幕下载菜单"
@@ -372,6 +403,7 @@ local function fetch_subtitle_details(sub_id)
     end
 
     local url = ASSRT_DETAIL_API .."?token=" .. o.api_token .. "&id=" .. (sub_id or 0)
+    msg.info("[ASSRT] 请求字幕详情URL: " .. url)
     local res = http_request(url)
     if not res or res.status ~= 0 then
         local message = "获取字幕详细信息失败，查看控制台获取更多信息"
@@ -441,6 +473,7 @@ local function fetch_subtitle_details(sub_id)
 end
 
 local function search_subtitles(pos, query)
+    msg.info("[ASSRT] 开始搜索字幕，查询: " .. (query or "空") .. "，位置: " .. (pos or "0"))
     local items = {}
     local type = "menu_subtitle"
     local title = "输入搜索内容"
@@ -456,29 +489,32 @@ local function search_subtitles(pos, query)
         end
 
         local url = ASSRT_SEARCH_API .. "?token=" .. o.api_token .. "&q=" .. url_encode(query) .. "&no_muxer=1&pos=" .. pos
+        msg.info("[ASSRT] 搜索URL: " .. url)
         local res = http_request(url)
         if not res or res.status ~= 0 then
+            msg.error("[ASSRT] 搜索字幕失败: " .. (res and res.errmsg or "网络请求失败"))
             local message = "搜索字幕失败，查看控制台获取更多信息"
             if uosc_available then
                 update_menu_uosc(type, title, message, footnote, cmd, query)
             else
                 mp.osd_message(message, 3)
             end
-            msg.error("Failed to search subtitles: " .. (res and res.errmsg or "Unknown error"))
             return nil
         end
 
         local sub = res.sub
         local subs = {}
         if sub then subs = res.sub.subs end
+        msg.info("[ASSRT] 搜索完成，找到 " .. #subs .. " 个字幕结果")
+        
         if #subs == 0 then
+            msg.info("[ASSRT] 未找到任何字幕结果")
             local message = "未找到字幕，建议更改关键字尝试重新搜索"
             if uosc_available then
                 update_menu_uosc(type, title, message, footnote, cmd, query)
             else
                 mp.osd_message(message, 3)
             end
-            msg.info("No subtitles found.")
             return nil
         end
 
@@ -618,31 +654,43 @@ function update_menu_uosc(menu_type, menu_title, menu_item, menu_footnote, menu_
 end
 
 local function sub_assrt()
+    msg.info("[ASSRT] ========== 开始 ASSRT 字幕搜索 ==========")
     local path = mp.get_property("path")
     local filename = mp.get_property("filename/no-ext")
     local title = mp.get_property("media-title")
     local thin_space = string.char(0xE2, 0x80, 0x89)
+    
+    msg.info("[ASSRT] 当前视频路径: " .. (path or "无"))
+    msg.info("[ASSRT] 文件名: " .. (filename or "无"))
+    msg.info("[ASSRT] 媒体标题: " .. (title or "无"))
+    
     if not path then
-        msg.error("No file loaded.")
+        msg.error("[ASSRT] 未加载任何文件")
         return
     end
 
     if is_protocol(path) then
         title = url_decode(title:gsub('%.[^%.]+$', ''))
+        msg.info("[ASSRT] 检测到网络视频，处理后的标题: " .. (title or "无"))
     elseif #title < #filename then
         title = filename
+        msg.info("[ASSRT] 使用文件名作为标题: " .. title)
     end
 
     local pos = 0
     local title = title:gsub(thin_space, " ")
     local query = format_filename(title):gsub("%s*E%d+$", "")
+    
+    msg.info("[ASSRT] 格式化后的搜索查询: " .. query)
 
     if cache.title and cache.title == query
     and cache.items and #cache.items > 0 then
+        msg.info("[ASSRT] 使用缓存的搜索结果")
         search_subtitles("has_details")
         return
     end
 
+    msg.info("[ASSRT] 缓存未命中，开始新的搜索")
     cache.title = query
 
     if uosc_available then
@@ -653,13 +701,12 @@ local function sub_assrt()
 end
 
 mp.register_script_message('uosc-version', function()
+    msg.info("[ASSRT] 检测到 uosc 可用")
     uosc_available = true
-    -- 不覆盖 uosc 的 download-subtitles 绑定，让两个功能共存
-    -- mp.commandv('script-message-to', 'uosc', 'overwrite-binding', 'download-subtitles',
-    -- 'script-message-to  sub_assrt sub-assrt')
 end)
 
 mp.register_script_message("open-search-menu", function(pos, query)
+    msg.info("[ASSRT] 接收到打开搜索菜单消息，pos: " .. (pos or "0") .. ", query: " .. (query or "空"))
     if uosc_available then
         mp.commandv("script-message-to", "uosc", "open-menu", "menu_subtitle")
     end
@@ -671,22 +718,28 @@ mp.register_script_message("open-search-menu", function(pos, query)
 end)
 
 mp.register_script_message("search-subtitles-event", function(pos, query)
+    msg.info("[ASSRT] 接收到搜索字幕事件消息，pos: " .. (pos or "0") .. ", query: " .. (query or "空"))
     if uosc_available then
         mp.commandv("script-message-to", "uosc", "open-menu", "menu_subtitle")
     end
     search_subtitles(pos, query)
 end)
 mp.register_script_message("fetch-details-event", function(query)
+    msg.info("[ASSRT] 接收到获取详情事件消息，query: " .. (query or "空"))
     if uosc_available then
         mp.commandv("script-message-to", "uosc", "open-menu", "subtitle_details")
     end
     fetch_subtitle_details(query)
 end)
 mp.register_script_message("download-file-event", function(url, filename)
+    msg.info("[ASSRT] 接收到下载文件事件消息，url: " .. (url or "空") .. ", filename: " .. (filename or "空"))
     if uosc_available then
         mp.commandv("script-message-to", "uosc", "open-menu", "download_subtitle")
     end
     download_file(url, filename)
 end)
 
-mp.register_script_message("sub-assrt", sub_assrt)
+mp.register_script_message("sub-assrt", function()
+    msg.info("[ASSRT] 接收到主入口脚本消息")
+    sub_assrt()
+end)
