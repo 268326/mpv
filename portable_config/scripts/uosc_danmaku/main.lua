@@ -6,6 +6,7 @@ require("guess")
 require("api")
 require('extra')
 require('render')
+local config_saver = require('config_saver')
 
 input_loaded, input = pcall(require, "mp.input")
 uosc_available = false
@@ -406,11 +407,22 @@ function add_danmaku_setup(actived, status)
         table.insert(items, item_config)
     end
 
+    -- 添加保存配置按钮
+    table.insert(items, {
+        title = "保存当前配置到文件",
+        hint = "将修改永久保存",
+        value = { "script-message", "save_danmaku_config" },
+        keep_open = false,
+        selectable = true,
+        bold = true,
+        icon = "save"
+    })
+
     local menu_props = {
         type = "menu_style",
         title = "弹幕样式",
         search_style = "disabled",
-        footnote = "样式更改仅在本次播放生效",
+        footnote = "样式更改可保存至配置文件",
         item_actions_place = "outside",
         items = items,
         callback = { mp.get_script_name(), 'setup-danmaku-style'},
@@ -778,6 +790,8 @@ mp.register_script_message("setup-danmaku-style", function(query, text)
                 if ordered_keys[event.index] == "bold" then
                     options.bold = options.bold == "true" and "false" or "true"
                     menu_items_config.bold.hint = options.bold
+                    -- 保存配置到文件
+                    config_saver.save_option("bold", options.bold)
                 end
                 -- "updata" 模式会保留输入框文字
                 add_danmaku_setup(ordered_keys[event.index], "updata")
@@ -786,6 +800,8 @@ mp.register_script_message("setup-danmaku-style", function(query, text)
                 -- msg.info("event.action：" .. event.action)
                 options[event.action] = menu_items_config[event.action]["original"]
                 menu_items_config[event.action]["hint"] = options[event.action]
+                -- 保存配置到文件
+                config_saver.save_option(event.action, options[event.action])
                 add_danmaku_setup(event.action, "updata")
                 if event.action == "density" or event.action == "scrolltime" then
                     load_danmaku(true)
@@ -809,6 +825,8 @@ mp.register_script_message("setup-danmaku-style", function(query, text)
                 end
                 options[query] = tostring(num)
                 menu_items_config[query]["hint"] = options[query]
+                -- 保存配置到文件
+                config_saver.save_option(query, options[query])
                 -- "refresh" 模式会清除输入框文字
                 add_danmaku_setup(query, "refresh")
                 if query == "density" or query == "scrolltime" then
@@ -890,5 +908,30 @@ mp.register_script_message("setup-source-delay", function(query, text)
             danmaku_delay_setup(query)
             load_danmaku(true, true)
         end
+    end
+end)
+
+-- 注册保存配置的脚本消息
+mp.register_script_message("save_danmaku_config", function()
+    local config_to_save = {
+        scrolltime = options.scrolltime,
+        fontname = options.fontname,
+        fontsize = options.fontsize,
+        font_size_strict = options.font_size_strict,
+        shadow = options.shadow,
+        bold = options.bold,
+        density = options.density,
+        displayarea = options.displayarea,
+        outline = options.outline,
+        transparency = options.transparency,
+        blockmode = options.blockmode,
+        blacklist_path = options.blacklist_path
+    }
+    
+    local success = config_saver.save_options(config_to_save)
+    if success then
+        show_message("弹幕配置已保存到配置文件", 2)
+    else
+        show_message("保存配置失败", 2)
     end
 end)

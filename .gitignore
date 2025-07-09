@@ -13,10 +13,6 @@ portable_config/watch_later/
 portable_config/danmaku-history.json
 portable_config/saved-props.json
 
-# Python 相关
-__pycache__/
-*.py[cod]
-*$py.class
 
 # 临时文件和构建产物
 *.tmp
