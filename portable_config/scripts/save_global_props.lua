@@ -118,7 +118,16 @@ local function save_data_file()
 	if file == nil then
 		return
 	end
-	local content, ret = mp.utils.format_json(saved_data)
+	
+	-- 过滤掉着色器相关的属性
+	local filtered_data = {}
+	for key, value in pairs(saved_data) do
+		if key ~= "glsl-shaders" and key ~= "glsl-shader" then
+			filtered_data[key] = value
+		end
+	end
+	
+	local content, ret = mp.utils.format_json(filtered_data)
 	if ret ~= error and content ~= nil then
 		file:write(content)
 	end
@@ -140,15 +149,18 @@ end
 
 local function init()
 	for _, prop_name in ipairs(opt.props) do
-		local saved_value = saved_data[prop_name]
-		if saved_value ~= nil then
-			mp.set_property_native(prop_name, saved_value)
-		end
-		if opt.save_mode == 2 then
-			mp.observe_property(prop_name, "native", function(_, prop_value)
-				saved_data[prop_name] = mp.get_property_native(prop_name)
-				save_data_file()
-			end)
+		-- 跳过着色器相关的属性
+		if prop_name ~= "glsl-shaders" and prop_name ~= "glsl-shader" then
+			local saved_value = saved_data[prop_name]
+			if saved_value ~= nil then
+				mp.set_property_native(prop_name, saved_value)
+			end
+			if opt.save_mode == 2 then
+				mp.observe_property(prop_name, "native", function(_, prop_value)
+					saved_data[prop_name] = mp.get_property_native(prop_name)
+					save_data_file()
+				end)
+			end
 		end
 	end
 end
@@ -159,9 +171,12 @@ mp.msg.info("正在运行 全局属性保存恢复 模式" .. opt.save_mode)
 if opt.save_mode == 1 then
 	mp.register_event("shutdown", function()
 		for _, prop_name in ipairs(opt.props) do
-			saved_data[prop_name] = mp.get_property_native(prop_name)
-			save_data_file()
+			-- 跳过着色器相关的属性
+			if prop_name ~= "glsl-shaders" and prop_name ~= "glsl-shader" then
+				saved_data[prop_name] = mp.get_property_native(prop_name)
+			end
 		end
+		save_data_file()
 	end)
 end
 
