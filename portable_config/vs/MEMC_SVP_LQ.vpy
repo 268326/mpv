@@ -12,7 +12,7 @@ clip = video_in
 ############
 
 H_Pre = 1440
-Cpu = 1
+Cpu = 0
 Gpu = 0
 Lk_Fmt = False
 ## 整数，预降低处理源高度（填你的显示器高度）
