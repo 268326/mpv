@@ -1,0 +1,514 @@
+[   0.003][v][cplayer] mpv v0.40.0-119-g1d1535ff9 Copyright © 2000-2025 mpv/MPlayer/mplayer2 projects
+[   0.004][v][cplayer]  built on May 25 2025 09:28:59
+[   0.004][v][cplayer] libplacebo version: v7.351.0 (v7.351.0-dirty)
+[   0.004][v][cplayer] FFmpeg version: N-119686-gae0f71a38
+[   0.004][v][cplayer] FFmpeg library versions:
+[   0.004][v][cplayer]    libavcodec      62.3.101
+[   0.004][v][cplayer]    libavdevice     62.0.100
+[   0.004][v][cplayer]    libavfilter     11.0.100
+[   0.004][v][cplayer]    libavformat     62.0.102
+[   0.004][v][cplayer]    libavutil       60.3.100
+[   0.004][v][cplayer]    libswresample   6.0.100
+[   0.004][v][cplayer]    libswscale      9.0.100
+[   0.004][v][cplayer] Configuration: -Ddebug=true -Db_ndebug=true -Doptimization=3 -Db_lto=true -Db_lto_mode=thin -Dlibmpv=true -Dpdf-build=enabled -Dlua=enabled -Djavascript=enabled -Dlibarchive=enabled -Dlibbluray=enabled -Ddvdnav=enabled -Duchardet=enabled -Drubberband=enabled -Dlcms2=enabled -Dspirv-cross=enabled -Dvulkan=enabled -Dvapoursynth=enabled -Dc_args=-Wno-error=int-conversion -Dprefix=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/install/x86_64-w64-mingw32 -Dlibdir=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/install/x86_64-w64-mingw32/lib -Ddefault_library=shared -Dprefer_static=True --cross-file=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/meson_cross.txt
+[   0.004][v][cplayer] List of enabled features: build-date cplugins cuda-hwaccel cuda-interop d3d-hwaccel d3d11 d3d9-hwaccel debug direct3d dos-paths dvdnav dxgi-debug-d3d11 ffmpeg ffnvcodec gl gl-dxinterop gl-dxinterop-d3d9 gl-win32 glob glob-win32 gpl iconv javascript jpeg lcms2 libarchive libass libavdevice libbluray libplacebo luajit rubberband rubberband-3 shaderc spirv-cross uchardet vaapi vaapi-win32 vapoursynth vector vulkan wasapi win32 win32-desktop win32-executable win32-smtc win32-threads zimg zimg-st428 zlib
+[   0.004][v][cplayer] Built with NDEBUG.
+[   0.004][v][cplayer] Command line options: '--ytdl-format=299+140' '--log-file=mpv_log_lowres.txt' '--msg-level=all=v' 'https://www.youtube.com/watch?v=zF4a7XXIVm8'
+[   0.004][v][cplayer] mpv v0.40.0-119-g1d1535ff9 Copyright © 2000-2025 mpv/MPlayer/mplayer2 projects
+[   0.004][v][cplayer]  built on May 25 2025 09:28:59
+[   0.004][v][cplayer] libplacebo version: v7.351.0 (v7.351.0-dirty)
+[   0.005][v][cplayer] FFmpeg version: N-119686-gae0f71a38
+[   0.005][v][cplayer] FFmpeg library versions:
+[   0.005][v][cplayer]    libavcodec      62.3.101
+[   0.005][v][cplayer]    libavdevice     62.0.100
+[   0.005][v][cplayer]    libavfilter     11.0.100
+[   0.005][v][cplayer]    libavformat     62.0.102
+[   0.005][v][cplayer]    libavutil       60.3.100
+[   0.005][v][cplayer]    libswresample   6.0.100
+[   0.005][v][cplayer]    libswscale      9.0.100
+[   0.005][v][cplayer] Configuration: -Ddebug=true -Db_ndebug=true -Doptimization=3 -Db_lto=true -Db_lto_mode=thin -Dlibmpv=true -Dpdf-build=enabled -Dlua=enabled -Djavascript=enabled -Dlibarchive=enabled -Dlibbluray=enabled -Ddvdnav=enabled -Duchardet=enabled -Drubberband=enabled -Dlcms2=enabled -Dspirv-cross=enabled -Dvulkan=enabled -Dvapoursynth=enabled -Dc_args=-Wno-error=int-conversion -Dprefix=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/install/x86_64-w64-mingw32 -Dlibdir=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/install/x86_64-w64-mingw32/lib -Ddefault_library=shared -Dprefer_static=True --cross-file=/__w/mpv-winbuild/mpv-winbuild/mpv-winbuild-cmake/build64-v3/meson_cross.txt
+[   0.005][v][cplayer] List of enabled features: build-date cplugins cuda-hwaccel cuda-interop d3d-hwaccel d3d11 d3d9-hwaccel debug direct3d dos-paths dvdnav dxgi-debug-d3d11 ffmpeg ffnvcodec gl gl-dxinterop gl-dxinterop-d3d9 gl-win32 glob glob-win32 gpl iconv javascript jpeg lcms2 libarchive libass libavdevice libbluray libplacebo luajit rubberband rubberband-3 shaderc spirv-cross uchardet vaapi vaapi-win32 vapoursynth vector vulkan wasapi win32 win32-desktop win32-executable win32-smtc win32-threads zimg zimg-st428 zlib
+[   0.005][v][cplayer] Built with NDEBUG.
+[   0.005][d][global] home path: '' -> 'D:/mpv/portable_config'
+[   0.006][d][global] user path: '~~home/' -> 'D:/mpv/portable_config'
+[   0.006][d][global] user path: '~~old_home/' -> ''
+[   0.006][d][global] config path: 'encoding-profiles.conf' -/-> 'D:/mpv/portable_config/encoding-profiles.conf'
+[   0.006][d][global] config path: 'mpv.conf' -> 'D:/mpv/portable_config/mpv.conf'
+[   0.006][d][global] config path: 'config' -/-> 'D:/mpv/portable_config/config'
+[   0.006][v][cplayer] Reading config file D:/mpv/portable_config/mpv.conf
+[   0.006][v][ifo_dvdnav] Opening D:/mpv/portable_config/mpv.conf
+[   0.006][v][bdmv/bluray] Opening D:/mpv/portable_config/mpv.conf
+[   0.006][v][file] Opening D:/mpv/portable_config/mpv.conf
+[   0.007][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.007][d][file] Stream opened successfully.
+[   0.007][v][cplayer] Applying profile 'default'...
+[   0.007][v][cplayer] Setting option 'input-conf' = '~~/input_uosc.conf' (flags = 4)
+[   0.008][v][cplayer] Setting option 'include' = '~~/profiles.conf' (flags = 4)
+[   0.008][d][global] config path: 'profiles.conf' -> 'D:/mpv/portable_config/profiles.conf'
+[   0.008][d][global] user path: '~~/profiles.conf' -> 'D:/mpv/portable_config/profiles.conf'
+[   0.008][v][cplayer] Reading config file D:/mpv/portable_config/profiles.conf
+[   0.008][v][ifo_dvdnav] Opening D:/mpv/portable_config/profiles.conf
+[   0.008][v][bdmv/bluray] Opening D:/mpv/portable_config/profiles.conf
+[   0.008][v][file] Opening D:/mpv/portable_config/profiles.conf
+[   0.008][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.008][d][file] Stream opened successfully.
+[   0.009][v][cplayer] Setting option 'include' = '~~/script-opts.conf' (flags = 4)
+[   0.009][d][global] config path: 'script-opts.conf' -> 'D:/mpv/portable_config/script-opts.conf'
+[   0.009][d][global] user path: '~~/script-opts.conf' -> 'D:/mpv/portable_config/script-opts.conf'
+[   0.009][v][cplayer] Reading config file D:/mpv/portable_config/script-opts.conf
+[   0.009][v][ifo_dvdnav] Opening D:/mpv/portable_config/script-opts.conf
+[   0.009][v][bdmv/bluray] Opening D:/mpv/portable_config/script-opts.conf
+[   0.009][v][file] Opening D:/mpv/portable_config/script-opts.conf
+[   0.009][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.009][d][file] Stream opened successfully.
+[   0.010][v][cplayer] Setting option 'use-filedir-conf' = 'yes' (flags = 4)
+[   0.010][v][cplayer] Setting option 'vo' = 'gpu-next' (flags = 4)
+[   0.010][v][cplayer] Setting option 'gpu-api' = 'd3d11' (flags = 4)
+[   0.010][v][cplayer] Setting option 'hwdec' = 'auto-copy' (flags = 4)
+[   0.010][v][cplayer] Setting option 'hwdec-codecs' = 'h264,hevc,vp8,vp9,ffv1' (flags = 4)
+[   0.010][v][cplayer] Setting option 'idle' = 'yes' (flags = 4)
+[   0.010][v][cplayer] Setting option 'input-ime' = 'no' (flags = 4)
+[   0.010][v][cplayer] Setting option 'input-builtin-bindings' = 'no' (flags = 4)
+[   0.010][v][cplayer] Setting option 'target-colorspace-hint' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'hr-seek-framedrop' = 'no' (flags = 4)
+[   0.011][v][cplayer] Setting option 'save-position-on-quit' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'watch-later-options' = 'start,vid,aid,sid' (flags = 4)
+[   0.011][v][cplayer] Setting option 'directory-mode' = 'ignore' (flags = 4)
+[   0.011][v][cplayer] Setting option 'keep-open' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'autofit-smaller' = '50%x50%' (flags = 4)
+[   0.011][v][cplayer] Setting option 'keepaspect-window' = 'no' (flags = 4)
+[   0.011][v][cplayer] Setting option 'hidpi-window-scale' = 'no' (flags = 4)
+[   0.011][v][cplayer] Setting option 'cache' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'cache-secs' = '600' (flags = 4)
+[   0.011][v][cplayer] Setting option 'demuxer-max-bytes' = '1024MiB' (flags = 4)
+[   0.011][v][cplayer] Setting option 'demuxer-max-back-bytes' = '2048MiB' (flags = 4)
+[   0.011][v][cplayer] Setting option 'icc-cache' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'icc-cache-dir' = '~~/_cache/icc' (flags = 4)
+[   0.011][v][cplayer] Setting option 'gpu-shader-cache' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'gpu-shader-cache-dir' = '~~/_cache/shader' (flags = 4)
+[   0.011][v][cplayer] Setting option 'watch-later-dir' = '~~/_cache/watch_later' (flags = 4)
+[   0.011][v][cplayer] Setting option 'network-timeout' = '120' (flags = 4)
+[   0.011][v][cplayer] Setting option 'stop-playback-on-init-failure' = 'yes' (flags = 4)
+[   0.011][v][cplayer] Setting option 'cache-pause-wait' = '5' (flags = 4)
+[   0.012][v][cplayer] Setting option 'demuxer-termination-timeout' = '3' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-on-seek' = 'msg-bar' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-bar-w' = '100' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-bar-h' = '1.8' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-bar-align-y' = '-1' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-color' = '#672168' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-outline-color' = '#EEEEEE' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-outline-size' = '0.8' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-font-size' = '38' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-fractions' = 'yes' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-playing-msg' = '${filename}' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-playlist-entry' = 'both' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-duration' = '2000' (flags = 4)
+[   0.012][v][cplayer] Setting option 'osd-playing-msg-duration' = '3000' (flags = 4)
+[   0.012][v][cplayer] Setting option 'ao' = 'wasapi' (flags = 4)
+[   0.012][v][cplayer] Setting option 'audio-device' = 'auto' (flags = 4)
+[   0.012][v][cplayer] Setting option 'audio-exclusive' = 'yes' (flags = 4)
+[   0.012][v][cplayer] Setting option 'volume' = '100' (flags = 4)
+[   0.012][v][cplayer] Setting option 'volume-max' = '130' (flags = 4)
+[   0.012][v][cplayer] Setting option 'audio-channels' = '7.1,5.1,stereo' (flags = 4)
+[   0.012][v][cplayer] Setting option 'audio-file-auto' = 'fuzzy' (flags = 4)
+[   0.012][v][cplayer] Setting option 'video-sync' = 'display-resample' (flags = 4)
+[   0.013][v][cplayer] Setting option 'interpolation' = 'yes' (flags = 4)
+[   0.013][v][cplayer] Setting option 'cscale' = 'mitchell' (flags = 4)
+[   0.013][v][cplayer] Setting option 'scale' = 'ewa_lanczossharp' (flags = 4)
+[   0.013][v][cplayer] Setting option 'dscale' = 'mitchell' (flags = 4)
+[   0.013][v][cplayer] Setting option 'sigmoid-upscaling' = 'yes' (flags = 4)
+[   0.013][v][cplayer] Setting option 'correct-downscaling' = 'yes' (flags = 4)
+[   0.013][v][cplayer] Setting option 'scale-antiring' = '0.5' (flags = 4)
+[   0.013][v][cplayer] Setting option 'dscale-antiring' = '0.5' (flags = 4)
+[   0.013][v][cplayer] Setting option 'linear-upscaling' = 'no' (flags = 4)
+[   0.013][v][cplayer] Setting option 'linear-downscaling' = 'no' (flags = 4)
+[   0.013][v][cplayer] Setting option 'dither-depth' = 'auto' (flags = 4)
+[   0.013][v][cplayer] Setting option 'deinterlace' = 'auto' (flags = 4)
+[   0.014][v][cplayer] Setting option 'hdr-peak-percentile' = '99.99' (flags = 4)
+[   0.014][v][cplayer] Setting option 'osc' = 'no' (flags = 4)
+[   0.014][v][cplayer] Setting option 'ytdl-raw-options-append' = 'sub-langs=-danmaku' (flags = 4)
+[   0.014][v][cplayer] Setting option 'ytdl-format' = 'bestvideo*+bestaudio/best' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-auto' = 'fuzzy' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-file-paths' = 'sub;subtitles' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-codepage' = 'GB18030' (flags = 4)
+[   0.014][v][cplayer] Setting option 'slang' = 'chs,sc,zh-cn,chi,zh,zh-tw,cht,zho,ze' (flags = 4)
+[   0.014][v][cplayer] Setting option 'subs-fallback' = 'yes' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-font' = 'LXGW WenKai Mono' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-font-size' = '44' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-scale-signs' = 'yes' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-outline-size' = '4' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-blur' = '1' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-color' = '#FFD766' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-use-margins' = 'yes' (flags = 4)
+[   0.014][v][cplayer] Setting option 'sub-ass-force-margins' = 'yes' (flags = 4)
+[   0.014][v][cplayer] Setting option 'screenshot-format' = 'png' (flags = 4)
+[   0.014][v][cplayer] Setting option 'screenshot-jpeg-quality' = '100' (flags = 4)
+[   0.014][v][cplayer] Setting option 'screenshot-png-compression' = '4' (flags = 4)
+[   0.014][v][cplayer] Setting option 'screenshot-webp-lossless' = 'yes' (flags = 4)
+[   0.015][v][cplayer] Setting option 'screenshot-jxl-distance' = '0' (flags = 4)
+[   0.015][v][cplayer] Setting option 'screenshot-tag-colorspace' = 'no' (flags = 4)
+[   0.015][v][cplayer] Setting option 'screenshot-high-bit-depth' = 'no' (flags = 4)
+[   0.015][v][cplayer] Setting option 'screenshot-template' = '~~desktop/MPV-%P-N%n' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'console-font_size=16' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'console-scale_with_window=no' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'commands-history_path=~~/_cache/command_history.txt' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'stats-duration=2' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'stats-redraw_delay=0.5' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'stats-persistent_overlay=yes' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'stats-filter_params_max_length=1' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'contextmenu_plus-input_conf=~~/input_contextmenu_plus.conf' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'contextmenu_plus-uosc_alt=yes' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'save_global_props-props=volume,mute' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'thumbfast-min_duration=30' (flags = 4)
+[   0.015][v][cplayer] Setting option 'script-opts-append' = 'uosc-controls=menu,ST-stats_tog,ST-thumb_tog,gap,play_pause,gap,subtitles,audio,<has_chapter>chapters,<has_many_edition>editions,<has_many_video>video,<stream>stream-quality,cycle:toggle_on:show_danmaku@uosc_danmaku:on=toggle_on/off=toggle_off?弹幕开关,button:danmaku_menu,space,speed,space,shuffle,loop-playlist,loop-file,gap,prev,items,next,gap,fullscreen' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-video_types=avi,flv,m2ts,m4v,mkv,mov,mp4,mpeg,mpg,ogv,rm,rmvb,ts,vob,webm,wmv' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-audio_types=aac,ac3,ape,dsf,dts,flac,m4a,mka,mp3,ogg,opus,wav,wma,wv' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-image_types=apng,avif,bmp,gif,jfif,jpeg,jpg,jxl,png,svg,tif,tiff,webp' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-subtitle_types=ass,idx,lrc,mks,pgs,sup,srt,ssa,txt,vtt' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-default_directory={drives}' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-languages=slang' (flags = 4)
+[   0.016][v][cplayer] Setting option 'script-opts-append' = 'uosc-idlemsg=mpv-lazy' (flags = 4)
+[   0.016][v][cplayer] Setting option 'ytdl-format' = '299+140' (flags = 8)
+[   0.016][v][cplayer] Setting option 'log-file' = 'mpv_log_lowres.txt' (flags = 8)
+[   0.016][v][cplayer] Setting option 'msg-level' = 'all=v' (flags = 8)
+[   0.017][d][global] config path: 'input_uosc.conf' -> 'D:/mpv/portable_config/input_uosc.conf'
+[   0.017][d][global] user path: '~~/input_uosc.conf' -> 'D:/mpv/portable_config/input_uosc.conf'
+[   0.017][v][ifo_dvdnav] Opening D:/mpv/portable_config/input_uosc.conf
+[   0.017][v][bdmv/bluray] Opening D:/mpv/portable_config/input_uosc.conf
+[   0.018][v][file] Opening D:/mpv/portable_config/input_uosc.conf
+[   0.018][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.018][d][file] Stream opened successfully.
+[   0.018][v][input] Parsing input config file D:/mpv/portable_config/input_uosc.conf
+[   0.019][v][input] Input config file D:/mpv/portable_config/input_uosc.conf parsed: 87 binds
+[   0.019][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
+[   0.020][d][stats] Loading lua script @stats.lua...
+[   0.020][d][console] Loading lua script @console.lua...
+[   0.020][d][auto_profiles] Loading lua script @auto_profiles.lua...
+[   0.020][d][select] Loading lua script @select.lua...
+[   0.020][d][positioning] Loading lua script @positioning.lua...
+[   0.020][d][commands] Loading lua script @commands.lua...
+[   0.020][v][clipboard] Initialized win32 clipboard backend.
+[   0.020][d][global] config path: 'scripts' -> 'D:/mpv/portable_config/scripts'
+[   0.021][d][ytdl_hook] loading mp.defaults
+[   0.021][d][stats] loading mp.defaults
+[   0.021][d][console] loading mp.defaults
+[   0.021][d][auto_profiles] loading mp.defaults
+[   0.021][d][select] loading mp.defaults
+[   0.021][d][positioning] loading mp.defaults
+[   0.021][d][commands] loading mp.defaults
+[   0.022][d][console] loading @console.lua
+[   0.022][d][auto_profiles] loading @auto_profiles.lua
+[   0.022][d][ytdl_hook] loading @ytdl_hook.lua
+[   0.022][d][stats] loading @stats.lua
+[   0.022][d][select] loading @select.lua
+[   0.022][d][commands] loading @commands.lua
+[   0.022][d][positioning] loading @positioning.lua
+[   0.023][d][select] reading options for select
+[   0.023][d][positioning] reading options for positioning
+[   0.023][d][global] config path: 'script-opts/select.conf' -/-> 'D:/mpv/portable_config/script-opts/select.conf'
+[   0.023][d][ytdl_hook] reading options for ytdl_hook
+[   0.023][d][select] script-opts/select.conf not found.
+[   0.023][d][global] config path: 'lua-settings/select.conf' -/-> 'D:/mpv/portable_config/lua-settings/select.conf'
+[   0.023][d][select] lua-settings/select.conf not found.
+[   0.023][d][global] config path: 'script-opts/positioning.conf' -/-> 'D:/mpv/portable_config/script-opts/positioning.conf'
+[   0.023][d][positioning] script-opts/positioning.conf not found.
+[   0.023][d][global] config path: 'script-opts/ytdl_hook.conf' -/-> 'D:/mpv/portable_config/script-opts/ytdl_hook.conf'
+[   0.023][d][ytdl_hook] script-opts/ytdl_hook.conf not found.
+[   0.023][d][global] config path: 'lua-settings/positioning.conf' -/-> 'D:/mpv/portable_config/lua-settings/positioning.conf'
+[   0.023][d][positioning] lua-settings/positioning.conf not found.
+[   0.023][d][global] config path: 'lua-settings/ytdl_hook.conf' -/-> 'D:/mpv/portable_config/lua-settings/ytdl_hook.conf'
+[   0.023][d][ytdl_hook] lua-settings/ytdl_hook.conf not found.
+[   0.024][d][stats] reading options for stats
+[   0.024][d][global] config path: 'script-opts/stats.conf' -> 'D:/mpv/portable_config/script-opts/stats.conf'
+[   0.024][v][stats] Opened config file script-opts/stats.conf.
+[   0.024][d][hdr_mode] Loading lua script D:/mpv/portable_config/scripts/hdr-mode.lua...
+[   0.024][d][uosc] Loading lua script D:/mpv/portable_config/scripts/uosc/main.lua...
+[   0.025][d][auto_sub_fonts_dir] Loading lua script D:/mpv/portable_config/scripts/auto_sub_fonts_dir.lua...
+[   0.025][d][hdr_mode] loading mp.defaults
+[   0.025][d][stats2] Loading lua script D:/mpv/portable_config/scripts/stats.lua...
+[   0.025][d][uosc] loading mp.defaults
+[   0.025][d][auto_sub_fonts_dir] loading mp.defaults
+[   0.025][d][display_info] Loading cplugin script D:/mpv/portable_config/scripts/display-info.dll...
+[   0.025][d][stats2] loading mp.defaults
+[   0.025][d][thumbfast] Loading lua script D:/mpv/portable_config/scripts/thumbfast.lua...
+[   0.025][d][auto_load_fonts] Loading js script D:/mpv/portable_config/scripts/auto_load_fonts.js...
+[   0.025][d][hdr_mode] loading file D:/mpv/portable_config/scripts/hdr-mode.lua
+[   0.025][d][uosc] loading file D:/mpv/portable_config/scripts/uosc/main.lua
+[   0.025][d][auto_sub_fonts_dir] loading file D:/mpv/portable_config/scripts/auto_sub_fonts_dir.lua
+[   0.025][d][shader_filter_manager] Loading lua script D:/mpv/portable_config/scripts/shader-filter-manager.lua...
+[   0.025][d][stats2] loading file D:/mpv/portable_config/scripts/stats.lua
+[   0.026][d][contextmenu_plus] Loading lua script D:/mpv/portable_config/scripts/contextmenu_plus.lua...
+[   0.026][d][sub_assrt] Loading lua script D:/mpv/portable_config/scripts/sub-assrt.lua...
+[   0.026][d][hdr_mode] reading options for hdr_mode
+[   0.026][d][auto_sub_fonts_dir] reading options for auto_sub_fonts_dir
+[   0.026][d][global] config path: 'script-opts/hdr_mode.conf' -> 'D:/mpv/portable_config/script-opts/hdr_mode.conf'
+[   0.026][d][global] config path: 'script-opts/auto_sub_fonts_dir.conf' -/-> 'D:/mpv/portable_config/script-opts/auto_sub_fonts_dir.conf'
+[   0.026][d][auto_sub_fonts_dir] script-opts/auto_sub_fonts_dir.conf not found.
+[   0.026][d][global] config path: 'lua-settings/auto_sub_fonts_dir.conf' -/-> 'D:/mpv/portable_config/lua-settings/auto_sub_fonts_dir.conf'
+[   0.026][d][auto_sub_fonts_dir] lua-settings/auto_sub_fonts_dir.conf not found.
+[   0.026][v][hdr_mode] Opened config file script-opts/hdr_mode.conf.
+[   0.027][d][uosc_danmaku] Loading lua script D:/mpv/portable_config/scripts/uosc_danmaku/main.lua...
+[   0.027][d][playlist_osd] Loading lua script D:/mpv/portable_config/scripts/playlist_osd.lua...
+[   0.027][d][sponsorblock_minimal] Loading lua script D:/mpv/portable_config/scripts/sponsorblock_minimal.lua...
+[   0.027][d][pip] Loading lua script D:/mpv/portable_config/scripts/pip.lua...
+[   0.027][d][quality_menu] Loading lua script D:/mpv/portable_config/scripts/quality-menu.lua...
+[   0.027][d][save_global_props] Loading lua script D:/mpv/portable_config/scripts/save_global_props.lua...
+[   0.028][v][cplayer] Waiting for scripts...
+[   0.028][d][stats2] reading options for stats2
+[   0.028][d][global] config path: 'script-opts/stats2.conf' -/-> 'D:/mpv/portable_config/script-opts/stats2.conf'
+[   0.028][d][stats2] script-opts/stats2.conf not found.
+[   0.028][d][cplayer] Run command: script-message, flags=64, args=[args="uosc-version", args="5.9.2"]
+[   0.028][d][commands] reading options for commands
+[   0.028][d][global] config path: 'lua-settings/stats2.conf' -/-> 'D:/mpv/portable_config/lua-settings/stats2.conf'
+[   0.028][d][stats2] lua-settings/stats2.conf not found.
+[   0.028][d][global] config path: 'script-opts/commands.conf' -/-> 'D:/mpv/portable_config/script-opts/commands.conf'
+[   0.028][d][commands] script-opts/commands.conf not found.
+[   0.028][d][global] config path: 'lua-settings/commands.conf' -/-> 'D:/mpv/portable_config/lua-settings/commands.conf'
+[   0.028][d][commands] lua-settings/commands.conf not found.
+[   0.028][d][console] reading options for console
+[   0.028][d][global] config path: 'script-opts/console.conf' -/-> 'D:/mpv/portable_config/script-opts/console.conf'
+[   0.028][d][console] script-opts/console.conf not found.
+[   0.029][v][cplayer] Set property: osc="no" -> 1
+[   0.029][d][global] config path: 'lua-settings/console.conf' -/-> 'D:/mpv/portable_config/lua-settings/console.conf'
+[   0.029][d][console] lua-settings/console.conf not found.
+[   0.029][d][cplayer] Run command: define-section, flags=64, args=[name="input_select", contents="", flags="default"]
+[   0.029][d][cplayer] Run command: define-section, flags=64, args=[name="input_commands", contents="", flags="default"]
+[   0.029][d][cplayer] Run command: define-section, flags=64, args=[name="input_console", contents="", flags="default"]
+[   0.029][d][cplayer] Run command: enable-section, flags=64, args=[name="input_console", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.029][d][cplayer] Run command: enable-section, flags=64, args=[name="input_commands", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.029][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_console", contents="", flags="force"]
+[   0.029][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_commands", contents="", flags="force"]
+[   0.029][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_console", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_select", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_positioning", contents="", flags="default"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_select", contents="", flags="force"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_select", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_positioning", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_stats", contents="", flags="default"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_stats2", contents="", flags="default"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_positioning", contents="", flags="force"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_commands", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_stats2", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_positioning", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_stats", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_stats2", contents="", flags="force"]
+[   0.030][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_stats", contents="", flags="force"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_stats2", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_stats", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.030][d][uosc] reading options for uosc_lang
+[   0.030][d][global] config path: 'script-opts/uosc_lang.conf' -/-> 'D:/mpv/portable_config/script-opts/uosc_lang.conf'
+[   0.030][d][uosc] script-opts/uosc_lang.conf not found.
+[   0.030][d][global] config path: 'lua-settings/uosc_lang.conf' -/-> 'D:/mpv/portable_config/lua-settings/uosc_lang.conf'
+[   0.030][d][uosc] lua-settings/uosc_lang.conf not found.
+[   0.031][v][auto_profiles] Re-evaluating auto profile save_props_auto
+[   0.031][d][cplayer] Unloading script @stats.lua (disabled by option)
+[   0.031][v][cplayer] Set property: load-stats-overlay="no" -> 1
+[   0.031][d][uosc] reading options for uosc
+[   0.031][w][stats2] 请以 --load-stats-overlay=no 启动mpv，以避免部分脚本联动的功能无效。
+[   0.031][v][auto_profiles] Profile condition error on evaluating: [string "profile save_props_auto condition"]:1: attempt to compare nil with number
+[   0.031][d][global] config path: 'script-opts/uosc.conf' -/-> 'D:/mpv/portable_config/script-opts/uosc.conf'
+[   0.031][d][stats] Destroying client handle...
+[   0.031][d][uosc] script-opts/uosc.conf not found.
+[   0.031][v][auto_profiles] Re-evaluating auto profile deband_bitrate
+[   0.032][d][global] config path: 'lua-settings/uosc.conf' -/-> 'D:/mpv/portable_config/lua-settings/uosc.conf'
+[   0.032][d][uosc] lua-settings/uosc.conf not found.
+[   0.032][v][auto_profiles] Profile condition error on evaluating: [string "profile deband_bitrate condition"]:1: attempt to perform arithmetic on field 'file_size' (a nil value)
+[   0.032][v][auto_profiles] Re-evaluating auto profile vsync_auto
+[   0.032][v][cplayer] Set property: user-data/osc={"idlescreen":true} -> 1
+[   0.032][v][auto_profiles] Profile condition error on evaluating: [string "profile vsync_auto condition"]:1: attempt to compare number with nil
+[   0.032][v][auto_profiles] Re-evaluating auto profile speed_limit2
+[   0.032][v][auto_profiles] Re-evaluating auto profile speed_limit1
+[   0.032][v][auto_profiles] Re-evaluating auto profile 4k_lightweight
+[   0.032][v][auto_profiles] Profile condition error on evaluating: [string "profile 4k_lightweight condition"]:1: attempt to compare number with nil
+[   0.032][v][auto_profiles] Re-evaluating auto profile photo_upscale_quality
+[   0.032][v][auto_profiles] Profile condition error on evaluating: [string "profile photo_upscale_quality condition"]:1: attempt to compare number with nil
+[   0.032][v][auto_profiles] Re-evaluating auto profile anime_upscale_quality
+[   0.032][v][auto_profiles] Profile condition error on evaluating: [string "profile anime_upscale_quality condition"]:1: attempt to compare number with nil
+[   0.033][v][auto_profiles] Re-evaluating auto profile save_props_auto
+[   0.033][v][auto_profiles] Profile condition error on evaluating: [string "profile save_props_auto condition"]:1: attempt to compare nil with number
+[   0.033][v][auto_profiles] Re-evaluating auto profile deband_bitrate
+[   0.033][v][auto_profiles] Profile condition error on evaluating: [string "profile deband_bitrate condition"]:1: attempt to perform arithmetic on field 'file_size' (a nil value)
+[   0.033][v][auto_profiles] Re-evaluating auto profile vsync_auto
+[   0.033][v][auto_profiles] Profile condition error on evaluating: [string "profile vsync_auto condition"]:1: attempt to compare number with nil
+[   0.033][v][auto_profiles] Re-evaluating auto profile speed_limit2
+[   0.033][v][auto_profiles] Re-evaluating auto profile speed_limit1
+[   0.033][v][auto_profiles] Re-evaluating auto profile 4k_lightweight
+[   0.033][v][auto_profiles] Profile condition error on evaluating: [string "profile 4k_lightweight condition"]:1: attempt to compare number with nil
+[   0.033][v][auto_profiles] Re-evaluating auto profile photo_upscale_quality
+[   0.033][v][auto_profiles] Profile condition error on evaluating: [string "profile photo_upscale_quality condition"]:1: attempt to compare number with nil
+[   0.034][v][auto_profiles] Re-evaluating auto profile anime_upscale_quality
+[   0.034][v][auto_profiles] Profile condition error on evaluating: [string "profile anime_upscale_quality condition"]:1: attempt to compare number with nil
+[   0.040][d][cplayer] Run command: define-section, flags=64, args=[name="mbtn_left", contents="mbtn_left script-binding uosc/__keybinding1\nalt+mbtn_left script-binding uosc/__keybinding2\nalt+ctrl+mbtn_left script-binding uosc/__keybinding3\nalt+shift+mbtn_left script-binding uosc/__keybinding4\nalt+ctrl+shift+mbtn_left script-binding uosc/__keybinding5\nctrl+mbtn_left script-binding uosc/__keybinding6\nctrl+shift+mbtn_left script-binding uosc/__keybinding7\nshift+mbtn_left script-binding uosc/__keybinding8\n", flags="force"]
+[   0.040][d][cplayer] Run command: define-section, flags=64, args=[name="mbtn_left_dbl", contents="mbtn_left_dbl ignore\n", flags="force"]
+[   0.040][d][cplayer] Run command: define-section, flags=64, args=[name="mbtn_right", contents="mbtn_right script-binding uosc/__keybinding9\n", flags="force"]
+[   0.040][d][cplayer] Run command: define-section, flags=64, args=[name="wheel", contents="wheel_up script-binding uosc/__keybinding10\nwheel_down script-binding uosc/__keybinding11\n", flags="force"]
+[   0.041][d][thumbfast] loading mp.defaults
+[   0.041][d][contextmenu_plus] loading mp.defaults
+[   0.041][d][shader_filter_manager] loading mp.defaults
+[   0.041][d][sub_assrt] loading mp.defaults
+[   0.041][d][uosc_danmaku] loading mp.defaults
+[   0.041][v][auto_load_fonts] Loading file @/defaults.js
+[   0.041][v][auto_load_fonts] Reading file '@/defaults.js'
+[   0.041][d][pip] loading mp.defaults
+[   0.041][d][playlist_osd] loading mp.defaults
+[   0.041][d][sponsorblock_minimal] loading mp.defaults
+[   0.042][d][quality_menu] loading mp.defaults
+[   0.042][d][shader_filter_manager] loading file D:/mpv/portable_config/scripts/shader-filter-manager.lua
+[   0.042][d][sub_assrt] loading file D:/mpv/portable_config/scripts/sub-assrt.lua
+[   0.042][d][uosc_danmaku] loading file D:/mpv/portable_config/scripts/uosc_danmaku/main.lua
+[   0.042][d][contextmenu_plus] loading file D:/mpv/portable_config/scripts/contextmenu_plus.lua
+[   0.042][d][pip] loading file D:/mpv/portable_config/scripts/pip.lua
+[   0.042][d][playlist_osd] loading file D:/mpv/portable_config/scripts/playlist_osd.lua
+[   0.042][d][quality_menu] loading file D:/mpv/portable_config/scripts/quality-menu.lua
+[   0.042][d][thumbfast] loading file D:/mpv/portable_config/scripts/thumbfast.lua
+[   0.042][d][save_global_props] loading mp.defaults
+[   0.042][d][sponsorblock_minimal] loading file D:/mpv/portable_config/scripts/sponsorblock_minimal.lua
+[   0.043][d][save_global_props] loading file D:/mpv/portable_config/scripts/save_global_props.lua
+[   0.044][i][shader_filter_manager] 着色器和滤镜管理脚本已加载
+[   0.044][d][uosc_danmaku] reading options for uosc_danmaku
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=[name="input_shader_filter_manager", contents="", flags="default"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=[name="input_shader_filter_manager", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_shader_filter_manager", contents="", flags="force"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_shader_filter_manager", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=[name="input_pip", contents="p nonscalable script-binding pip/toggle-pip\n", flags="default"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=[name="input_pip", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_pip", contents="", flags="force"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_pip", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][global] config path: 'init.js' -/-> 'D:/mpv/portable_config/init.js'
+[   0.044][d][global] config path: 'script-opts/uosc_danmaku.conf' -> 'D:/mpv/portable_config/script-opts/uosc_danmaku.conf'
+[   0.044][d][global] config path: '.init.js' -/-> 'D:/mpv/portable_config/.init.js'
+[   0.044][v][auto_load_fonts] Loading file D:/mpv/portable_config/scripts/auto_load_fonts.js
+[   0.044][d][save_global_props] reading options for save_global_props
+[   0.045][d][sponsorblock_minimal] reading options for sponsorblock_minimal
+[   0.045][v][auto_load_fonts] Reading file 'D:/mpv/portable_config/scripts/auto_load_fonts.js'
+[   0.045][d][playlist_osd] reading options for playlist_osd
+[   0.045][v][uosc_danmaku] Opened config file script-opts/uosc_danmaku.conf.
+[   0.045][d][global] config path: 'script-opts/save_global_props.conf' -> 'D:/mpv/portable_config/script-opts/save_global_props.conf'
+[   0.045][d][global] config path: 'script-opts/sponsorblock_minimal.conf' -> 'D:/mpv/portable_config/script-opts/sponsorblock_minimal.conf'
+[   0.045][d][global] config path: 'script-opts/playlist_osd.conf' -> 'D:/mpv/portable_config/script-opts/playlist_osd.conf'
+[   0.045][d][sub_assrt] reading options for sub_assrt
+[   0.045][d][contextmenu_plus] reading options for contextmenu_plus
+[   0.045][d][thumbfast] reading options for thumbfast
+[   0.045][d][quality_menu] reading options for quality-menu
+[   0.045][d][global] config path: 'script-opts/sub_assrt.conf' -> 'D:/mpv/portable_config/script-opts/sub_assrt.conf'
+[   0.045][d][global] config path: 'script-opts/contextmenu_plus.conf' -> 'D:/mpv/portable_config/script-opts/contextmenu_plus.conf'
+[   0.045][d][global] config path: 'script-opts/thumbfast.conf' -> 'D:/mpv/portable_config/script-opts/thumbfast.conf'
+[   0.046][d][global] user path: '~/.auto_load_fonts.conf' -> 'C:\Users\Administrator/.auto_load_fonts.conf'
+[   0.046][v][save_global_props] Opened config file script-opts/save_global_props.conf.
+[   0.046][v][sponsorblock_minimal] Opened config file script-opts/sponsorblock_minimal.conf.
+[   0.046][d][auto_load_fonts] reading options for auto_load_fonts
+[   0.046][v][playlist_osd] Opened config file script-opts/playlist_osd.conf.
+[   0.046][v][contextmenu_plus] Opened config file script-opts/contextmenu_plus.conf.
+[   0.046][v][thumbfast] Opened config file script-opts/thumbfast.conf.
+[   0.046][d][global] config path: 'script-opts/auto_load_fonts.conf' -> 'D:/mpv/portable_config/script-opts/auto_load_fonts.conf'
+[   0.046][v][sub_assrt] Opened config file script-opts/sub_assrt.conf.
+[   0.046][d][global] config path: 'saved-props.json' -> 'D:/mpv/portable_config/saved-props.json'
+[   0.046][d][global] user path: '~~/saved-props.json' -> 'D:/mpv/portable_config/saved-props.json'
+[   0.046][d][global] config path: 'script-opts/quality-menu.conf' -> 'D:/mpv/portable_config/script-opts/quality-menu.conf'
+[   0.046][d][global] user path: '~~/script-opts/auto_load_fonts.conf' -> 'D:/mpv/portable_config/script-opts/auto_load_fonts.conf'
+[   0.046][v][auto_load_fonts] Reading file 'D:/mpv/portable_config/script-opts/auto_load_fonts.conf'
+[   0.047][v][quality_menu] Opened config file script-opts/quality-menu.conf.
+[   0.047][i][sub_assrt] [ASSRT] 检测到 uosc 可用
+[   0.047][v][cplayer] Set property: volume=100 -> 1
+[   0.047][v][cplayer] Set property: mute=false -> 1
+[   0.048][i][save_global_props] 正在运行 全局属性保存恢复 模式1
+[   0.048][d][global] config path: '.fonts' -/-> 'D:/mpv/portable_config/.fonts'
+[   0.048][d][global] user path: '~~/.fonts' -> 'D:/mpv/portable_config/.fonts'
+[   0.048][d][cplayer] Run command: define-section, flags=64, args=[name="input_playlist_osd", contents="", flags="default"]
+[   0.048][d][cplayer] Run command: enable-section, flags=64, args=[name="input_playlist_osd", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.048][d][global] config path: 'input_contextmenu_plus.conf' -> 'D:/mpv/portable_config/input_contextmenu_plus.conf'
+[   0.048][d][global] user path: '~~/input_contextmenu_plus.conf' -> 'D:/mpv/portable_config/input_contextmenu_plus.conf'
+[   0.048][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_playlist_osd", contents="", flags="force"]
+[   0.048][d][cplayer] Run command: define-section, flags=64, args=[name="input_thumbfast", contents="", flags="default"]
+[   0.048][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_playlist_osd", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.048][d][cplayer] Run command: enable-section, flags=64, args=[name="input_thumbfast", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.048][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="get-version", args="quality_menu"]
+[   0.048][d][auto_load_fonts] reading options for auto_load_fonts
+[   0.048][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_thumbfast", contents="", flags="force"]
+[   0.049][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_thumbfast", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.049][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set", args="vformats", args="0"]
+[   0.049][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set", args="aformats", args="0"]
+[   0.049][d][global] config path: 'danmaku-history.json' -> 'D:/mpv/portable_config/danmaku-history.json'
+[   0.049][d][global] user path: '~~/danmaku-history.json' -> 'D:/mpv/portable_config/danmaku-history.json'
+[   0.049][d][global] config path: '.fonts' -/-> 'D:/mpv/portable_config/.fonts'
+[   0.049][d][global] user path: '~~/.fonts' -> 'D:/mpv/portable_config/.fonts'
+[   0.049][d][contextmenu_plus] load menu: ⇲ 轨道列表（聚合） , keyword: tracks
+[   0.049][d][contextmenu_plus] update menu: ⇲ 轨道列表（聚合）
+[   0.049][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="overwrite-binding", args="stream-quality", args="script-binding quality_menu/video_formats_toggle"]
+[   0.049][d][cplayer] Run command: define-section, flags=64, args=[name="input_quality_menu", contents="", flags="default"]
+[   0.049][d][contextmenu_plus] load menu: ⇲ 播放列表 , keyword: playlist
+[   0.049][d][contextmenu_plus] update menu: ⇲ 播放列表
+[   0.049][d][cplayer] Run command: enable-section, flags=64, args=[name="input_quality_menu", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.049][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_quality_menu", contents="", flags="force"]
+[   0.049][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_quality_menu", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.049][d][contextmenu_plus] load menu: ⇲ 版本列表 , keyword: editions
+[   0.049][d][contextmenu_plus] update menu: ⇲ 版本列表
+[   0.049][d][contextmenu_plus] load menu: ⇲ 章节列表 , keyword: chapters
+[   0.049][d][contextmenu_plus] update menu: ⇲ 章节列表
+[   0.050][d][contextmenu_plus] load menu: ⇲ 视频轨列表 , keyword: tracks/video
+[   0.050][d][contextmenu_plus] update menu: ⇲ 视频轨列表
+[   0.050][d][contextmenu_plus] load menu: ⇲ 音频轨列表 , keyword: tracks/audio
+[   0.050][d][contextmenu_plus] update menu: ⇲ 音频轨列表
+[   0.050][d][contextmenu_plus] load menu: ⇲ 字幕轨列表 , keyword: tracks/sub
+[   0.050][d][contextmenu_plus] update menu: ⇲ 字幕轨列表
+[   0.050][d][contextmenu_plus] load menu: ⇲ 次字幕轨列表 , keyword: tracks/sub-secondary
+[   0.050][d][contextmenu_plus] update menu: ⇲ 次字幕轨列表
+[   0.050][d][contextmenu_plus] load menu: ⇲ 音频输出设备列表 , keyword: audio-devices
+[   0.050][d][contextmenu_plus] update menu: ⇲ 音频输出设备列表
+[   0.050][d][ao/wasapi] Hotplug init
+[   0.052][d][ao/wasapi] Monitoring for hotplug events
+[   0.061][v][cplayer] Set property: user-data/uosc_danmaku/danmaku-delay=0 -> 1
+[   0.061][d][cplayer] Run command: script-message, flags=64, args=[args="menu-ready", args="contextmenu_plus"]
+[   0.061][d][cplayer] Run command: define-section, flags=64, args=[name="input_contextmenu_plus", contents="MBTN_RIGHT nonscalable script-binding contextmenu_plus/__keybinding1\n", flags="default"]
+[   0.061][d][cplayer] Run command: enable-section, flags=64, args=[name="input_contextmenu_plus", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.062][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_contextmenu_plus", contents="", flags="force"]
+[   0.062][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_contextmenu_plus", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.062][d][contextmenu_plus] update menu: ⇲ 轨道列表（聚合）
+[   0.062][d][contextmenu_plus] update menu: ⇲ 播放列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 版本列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 章节列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 视频轨列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 音频轨列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 字幕轨列表
+[   0.062][d][contextmenu_plus] update menu: ⇲ 次字幕轨列表
+[   0.062][d][contextmenu_plus] commit menu items: menu-data
+[   0.062][v][cplayer] Set property: menu-data=[{"cmd":"script-binding uosc/menu                         #! ※ 显示uosc菜单","title":"※ 显示uosc菜单"},{"submenu":[],"type":"submenu","title":"⇲ 轨道列表（聚合）"},{"submenu":[{"state":[],"cmd":"playlist-play-index 0","title":"watch?v=zF4a7XXIVm8"}],"type":"submenu","title":"⇲ 播放列表"},{"type":"submenu","submenu":[{"cmd":"playlist-shuffle                                 #! 导航 > 播放列表乱序重排","title":"播放列表乱序重排"},{"submenu":[],"type":"submenu","title":"⇲ 版本列表"},{"submenu":[],"type":"submenu","title":"⇲ 章节列表"},{"submenu":[],"type":"submenu","title":"⇲ 视频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 音频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 字幕轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 次字幕轨列表"}],"title":"导航"},{"cmd":"screenshot video                                 #! 截屏","title":"截屏"},{"cmd":"screenshot window                                #! 截屏（窗口）","title":"截屏（窗口）"},{"type":"submenu","submenu":[{"cmd":"cycle-values hwdec \"auto\" \"auto-copy\" \"no\"       #! 视频 > 切换 解码模式","title":"切换 解码模式"},{"cmd":"cycle deband                                     #! 视频 > 切换 去色带状态","title":"切换 去色带状态"},{"cmd":"cycle deinterlace                                #! 视频 > 切换 去隔行状态","title":"切换 去隔行状态"},{"cmd":"cycle icc-profile-auto                           #! 视频 > 切换 自动校色","title":"切换 自动校色"},{"cmd":"cycle correct-pts                                #! 视频 > 切换 时间码解析模式","title":"切换 时间码解析模式"}],"title":"视频"},{"type":"submenu","submenu":[{"cmd":"script-binding display-stats-toggle              #! 工具 > 常驻显示统计信息","title":"常驻显示统计信息"},{"cmd":"script-binding commands/open                     #! 工具 > 显示OSD命令行（控制台）","title":"显示OSD命令行（控制台）"},{"cmd":"script-message-to save_global_props clean_data   #! 工具 > 清除已记录的属性值","title":"清除已记录的属性值"},{"cmd":"cycle border                                     #! 工具 > 切换 窗口边框","title":"切换 窗口边框"},{"cmd":"cycle ontop                                      #! 工具 > 切换 窗口置顶","title":"切换 窗口置顶"},{"submenu":[{"title":"Autoselect device","state":["checked"],"cmd":"set audio-device auto"},{"title":"G24H2Classics (NVIDIA High Definition Audio)","state":[],"cmd":"set audio-device wasapi/{21a80c32-76ce-4aa0-8904-6a32f76ddf46}"},{"title":"扬声器 (Steam Streaming Microphone)","state":[],"cmd":"set audio-device wasapi/{6221b841-a7c0-4a1d-98fa-122e3ff6ea14}"},{"title":"扬声器 (Realtek(R) Audio)","state":[],"cmd":"set audio-device wasapi/{d91d90d1-0183-485f-8b67-474d6d96240e}"},{"title":"扬声器 (Steam Streaming Speakers)","state":[],"cmd":"set audio-device wasapi/{ef21cd93-c0fb-46b8-a88f-0da4ad0ddd69}"}],"type":"submenu","title":"⇲ 音频输出设备列表"}],"title":"工具"},{"cmd":"stop                                             #! 停止","title":"停止"},{"cmd":"quit                                             #! 退出mpv","title":"退出mpv"}] -> 1
+[   0.062][d][contextmenu_plus] update menu: ⇲ 音频输出设备列表
+[   0.062][d][contextmenu_plus] commit menu items: menu-data
+[   0.062][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set-button", args="danmaku", args="{\"icon\":\"search\",\"tooltip\":\"弹幕搜索\",\"command\":\"script-message open_search_danmaku_menu\"}"]
+[   0.062][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set-button", args="danmaku_source", args="{\"icon\":\"add_box\",\"tooltip\":\"从源添加弹幕\",\"command\":\"script-message open_add_source_menu\"}"]
+[   0.062][v][cplayer] Set property: menu-data=[{"cmd":"script-binding uosc/menu                         #! ※ 显示uosc菜单","title":"※ 显示uosc菜单"},{"submenu":[],"type":"submenu","title":"⇲ 轨道列表（聚合）"},{"submenu":[{"state":[],"cmd":"playlist-play-index 0","title":"watch?v=zF4a7XXIVm8"}],"type":"submenu","title":"⇲ 播放列表"},{"type":"submenu","submenu":[{"cmd":"playlist-shuffle                                 #! 导航 > 播放列表乱序重排","title":"播放列表乱序重排"},{"submenu":[],"type":"submenu","title":"⇲ 版本列表"},{"submenu":[],"type":"submenu","title":"⇲ 章节列表"},{"submenu":[],"type":"submenu","title":"⇲ 视频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 音频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 字幕轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 次字幕轨列表"}],"title":"导航"},{"cmd":"screenshot video                                 #! 截屏","title":"截屏"},{"cmd":"screenshot window                                #! 截屏（窗口）","title":"截屏（窗口）"},{"type":"submenu","submenu":[{"cmd":"cycle-values hwdec \"auto\" \"auto-copy\" \"no\"       #! 视频 > 切换 解码模式","title":"切换 解码模式"},{"cmd":"cycle deband                                     #! 视频 > 切换 去色带状态","title":"切换 去色带状态"},{"cmd":"cycle deinterlace                                #! 视频 > 切换 去隔行状态","title":"切换 去隔行状态"},{"cmd":"cycle icc-profile-auto                           #! 视频 > 切换 自动校色","title":"切换 自动校色"},{"cmd":"cycle correct-pts                                #! 视频 > 切换 时间码解析模式","title":"切换 时间码解析模式"}],"title":"视频"},{"type":"submenu","submenu":[{"cmd":"script-binding display-stats-toggle              #! 工具 > 常驻显示统计信息","title":"常驻显示统计信息"},{"cmd":"script-binding commands/open                     #! 工具 > 显示OSD命令行（控制台）","title":"显示OSD命令行（控制台）"},{"cmd":"script-message-to save_global_props clean_data   #! 工具 > 清除已记录的属性值","title":"清除已记录的属性值"},{"cmd":"cycle border                                     #! 工具 > 切换 窗口边框","title":"切换 窗口边框"},{"cmd":"cycle ontop                                      #! 工具 > 切换 窗口置顶","title":"切换 窗口置顶"},{"submenu":[{"title":"Autoselect device","state":["checked"],"cmd":"set audio-device auto"},{"title":"G24H2Classics (NVIDIA High Definition Audio)","state":[],"cmd":"set audio-device wasapi/{21a80c32-76ce-4aa0-8904-6a32f76ddf46}"},{"title":"扬声器 (Steam Streaming Microphone)","state":[],"cmd":"set audio-device wasapi/{6221b841-a7c0-4a1d-98fa-122e3ff6ea14}"},{"title":"扬声器 (Realtek(R) Audio)","state":[],"cmd":"set audio-device wasapi/{d91d90d1-0183-485f-8b67-474d6d96240e}"},{"title":"扬声器 (Steam Streaming Speakers)","state":[],"cmd":"set audio-device wasapi/{ef21cd93-c0fb-46b8-a88f-0da4ad0ddd69}"}],"type":"submenu","title":"⇲ 音频输出设备列表"}],"title":"工具"},{"cmd":"stop                                             #! 停止","title":"停止"},{"cmd":"quit                                             #! 退出mpv","title":"退出mpv"}] -> 1
+[   0.062][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set-button", args="danmaku_styles", args="{\"icon\":\"palette\",\"tooltip\":\"弹幕样式\",\"command\":\"script-message open_setup_danmaku_menu\"}"]
+[   0.062][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set-button", args="danmaku_delay", args="{\"icon\":\"more_time\",\"tooltip\":\"弹幕源延迟设置\",\"command\":\"script-message open_source_delay_menu\"}"]
+[   0.062][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set-button", args="danmaku_menu", args="{\"icon\":\"grid_view\",\"tooltip\":\"弹幕设置\",\"command\":\"script-message open_add_total_menu\"}"]
+[   0.063][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set", args="show_danmaku", args="off"]
+[   0.063][d][cplayer] Run command: define-section, flags=64, args=[name="input_uosc", contents="", flags="default"]
+[   0.063][d][cplayer] Run command: enable-section, flags=64, args=[name="input_uosc", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.063][d][cplayer] Run command: define-section, flags=64, args=[name="input_uosc_danmaku", contents="Ctrl+d nonscalable script-binding uosc_danmaku/open_search_danmaku_menu\nj nonscalable script-binding uosc_danmaku/show_danmaku_keyboard\n", flags="default"]
+[   0.063][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_uosc", contents="", flags="force"]
+[   0.063][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_uosc", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.063][d][cplayer] Run command: enable-section, flags=64, args=[name="input_uosc_danmaku", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.063][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_uosc_danmaku", contents="", flags="force"]
+[   0.063][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_uosc_danmaku", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.063][v][cplayer] Done loading scripts.
+[   0.063][d][global] config path: '_cache/watch_later' -> 'D:/mpv/portable_config/_cache/watch_later'
+[   0.063][d][global] user path: '~~/_cache/watch_later' -> 'D:/mpv/portable_config/_cache/watch_later'
+[   0.063][v][cplayer] Running hook: auto_profiles/on_before_start_file
+[   0.064][d][global] config path: 'watch?v=zF4a7XXIVm8.conf' -/-> 'D:/mpv/portable_config/watch?v=zF4a7XXIVm8.conf'
+[   0.064][d][global] config path: '_cache/watch_later' -> 'D:/mpv/portable_config/_cache/watch_later'
+[   0.064][d][global] user path: '~~/_cache/watch_later' -> 'D:/mpv/portable_config/_cache/watch_later'
+[   0.064][v][cplayer] Running hook: auto_profiles/on_load
+[   0.065][d][contextmenu_plus] update menu: ⇲ 播放列表
+[   0.065][d][contextmenu_plus] commit menu items: menu-data
+[   0.065][v][cplayer] Set property: menu-data=[{"cmd":"script-binding uosc/menu                         #! ※ 显示uosc菜单","title":"※ 显示uosc菜单"},{"submenu":[],"type":"submenu","title":"⇲ 轨道列表（聚合）"},{"submenu":[{"state":["checked"],"cmd":"playlist-play-index 0","title":"watch?v=zF4a7XXIVm8"}],"type":"submenu","title":"⇲ 播放列表"},{"type":"submenu","submenu":[{"cmd":"playlist-shuffle                                 #! 导航 > 播放列表乱序重排","title":"播放列表乱序重排"},{"submenu":[],"type":"submenu","title":"⇲ 版本列表"},{"submenu":[],"type":"submenu","title":"⇲ 章节列表"},{"submenu":[],"type":"submenu","title":"⇲ 视频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 音频轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 字幕轨列表"},{"submenu":[],"type":"submenu","title":"⇲ 次字幕轨列表"}],"title":"导航"},{"cmd":"screenshot video                                 #! 截屏","title":"截屏"},{"cmd":"screenshot window                                #! 截屏（窗口）","title":"截屏（窗口）"},{"type":"submenu","submenu":[{"cmd":"cycle-values hwdec \"auto\" \"auto-copy\" \"no\"       #! 视频 > 切换 解码模式","title":"切换 解码模式"},{"cmd":"cycle deband                                     #! 视频 > 切换 去色带状态","title":"切换 去色带状态"},{"cmd":"cycle deinterlace                                #! 视频 > 切换 去隔行状态","title":"切换 去隔行状态"},{"cmd":"cycle icc-profile-auto                           #! 视频 > 切换 自动校色","title":"切换 自动校色"},{"cmd":"cycle correct-pts                                #! 视频 > 切换 时间码解析模式","title":"切换 时间码解析模式"}],"title":"视频"},{"type":"submenu","submenu":[{"cmd":"script-binding display-stats-toggle              #! 工具 > 常驻显示统计信息","title":"常驻显示统计信息"},{"cmd":"script-binding commands/open                     #! 工具 > 显示OSD命令行（控制台）","title":"显示OSD命令行（控制台）"},{"cmd":"script-message-to save_global_props clean_data   #! 工具 > 清除已记录的属性值","title":"清除已记录的属性值"},{"cmd":"cycle border                                     #! 工具 > 切换 窗口边框","title":"切换 窗口边框"},{"cmd":"cycle ontop                                      #! 工具 > 切换 窗口置顶","title":"切换 窗口置顶"},{"submenu":[{"title":"Autoselect device","state":["checked"],"cmd":"set audio-device auto"},{"title":"G24H2Classics (NVIDIA High Definition Audio)","state":[],"cmd":"set audio-device wasapi/{21a80c32-76ce-4aa0-8904-6a32f76ddf46}"},{"title":"扬声器 (Steam Streaming Microphone)","state":[],"cmd":"set audio-device wasapi/{6221b841-a7c0-4a1d-98fa-122e3ff6ea14}"},{"title":"扬声器 (Realtek(R) Audio)","state":[],"cmd":"set audio-device wasapi/{d91d90d1-0183-485f-8b67-474d6d96240e}"},{"title":"扬声器 (Steam Streaming Speakers)","state":[],"cmd":"set audio-device wasapi/{ef21cd93-c0fb-46b8-a88f-0da4ad0ddd69}"}],"type":"submenu","title":"⇲ 音频输出设备列表"}],"title":"工具"},{"cmd":"stop                                             #! 停止","title":"停止"},{"cmd":"quit                                             #! 退出mpv","title":"退出mpv"}] -> 1
+[   0.065][v][cplayer] Set property: sub-fonts-dir="" -> 1
+[   0.066][i][auto_sub_fonts_dir] 回退 --sub-fonts-dir 至初始值
+[   0.066][v][cplayer] Running hook: quality_menu/on_load
+[   0.066][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set", args="vformats", args="0"]
+[   0.066][d][cplayer] Run command: script-message-to, flags=64, args=[target="uosc", args="set", args="aformats", args="0"]
+[   0.066][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.066][v][ytdl_hook] URL matches included substring ^%w+%.youtube%.com/. Trying ytdl first.
+[   0.067][d][global] config path: 'yt-dlp.exe' -/-> 'D:/mpv/portable_config/yt-dlp.exe'
+[   0.067][v][ytdl_hook] No youtube-dl found with path yt-dlp.exe in config directories
+[   0.067][d][cplayer] Run command: subprocess, flags=64, args=[args="yt-dlp,--no-warnings,-J,--flat-playlist,--sub-format,ass/srt/best,--format,299+140,--sub-langs,-danmaku,--write-srt,--no-playlist,--,https://www.youtube.com/watch?v=zF4a7XXIVm8", playback_only="yes", capture_size="67108864", capture_stdout="yes", capture_stderr="yes", detach="no", env="", stdin_data="", passthrough_stdin="no"]
+[   0.068][v][ytdl_hook] Starting subprocess: [yt-dlp, --no-warnings, -J, --flat-playlist, --sub-format, ass/srt/best, --format, 299+140, --sub-langs, -danmaku, --write-srt, --no-playlist, --, https://www.youtube.com/watch?v=zF4a7XXIVm8]
