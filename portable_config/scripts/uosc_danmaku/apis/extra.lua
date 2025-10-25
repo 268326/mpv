@@ -8,10 +8,6 @@ local Source = {
     ["优酷"] = "youku",
 }
 
-local function is_chinese(str)
-    return string.match(str, "[\228-\233][\128-\191]") ~= nil
-end
-
 local function load_extra_danmaku(url, episode, number, class, id, site, title, year)
     local play_url = nil
     if url:match("^.-%.html") then
@@ -19,11 +15,11 @@ local function load_extra_danmaku(url, episode, number, class, id, site, title, 
     else
         play_url = url:gsub("%?bsource=360ogvys$","")
     end
-    enabled = true
-    danmaku.anime = title .. " (" .. year .. ")"
-    danmaku.episode = "第" .. episode .. "话"
-    danmaku.source = site
-    danmaku.extra = {
+    ENABLED = true
+    DANMAKU.anime = title .. " (" .. year .. ")"
+    DANMAKU.episode = "第" .. episode .. "话"
+    DANMAKU.source = site
+    DANMAKU.extra = {
         id = id,
         site = site,
         year = year,
@@ -39,7 +35,7 @@ end
 local function query_tmdb(title, class, menu)
     local encoded_title = url_encode(title)
     local url = string.format("https://api.themoviedb.org/3/search/%s?api_key=%s&query=%s&language=zh-CN",
-    class, options.tmdb_api_key, encoded_title)
+    class, Base64.decode(options.tmdb_api_key), encoded_title)
 
     local cmd = {
         "curl",
@@ -61,7 +57,7 @@ local function query_tmdb(title, class, menu)
     })
 
     local data = utils.parse_json(res.stdout)
-    if res.status ~= 0 or not data.results or #data.results == 0 then
+    if not res.status or res.status ~= 0 or not data.results or #data.results == 0 then
         local message = "获取 tmdb 中文数据失败"
         if uosc_available then
             update_menu_uosc(menu.type, menu.title, message, menu.footnote, menu.cmd, title)
@@ -90,7 +86,7 @@ local function get_number(cat, id, site)
         capture_stderr = true,
     })
 
-    if res.status ~= 0 then
+    if not res.status or res.status ~= 0 then
         msg.error("Failed to fetch data: " .. (res.stderr or "unknown error"))
         return nil
     end
@@ -149,7 +145,7 @@ function get_details(class, id, site, title, year, number, episodenum)
         capture_stderr = true,
     })
 
-    if res.status ~= 0 then
+    if not res.status or res.status ~= 0 then
         local message = "无结果"
         if uosc_available and not episodenum then
             update_menu_uosc(menu_type, menu_title, message, footnote)
@@ -225,7 +221,7 @@ local function search_query(query, class, menu)
         capture_stderr = true,
     })
 
-    if res.status ~= 0 then
+    if not res.status or res.status ~= 0 then
         local message = "无结果"
         if uosc_available then
             update_menu_uosc(menu.type, menu.title, message, menu.footnote, menu.cmd, query)
@@ -301,8 +297,19 @@ function query_extra(name, class)
         return
     end
 
+
+    if options.tmdb_api_key == "" or #Base64.decode(options.tmdb_api_key) < 32 then
+        local message = "请正确设置 tmdb_api_key 或尝试使用中文搜索"
+        if uosc_available then
+            update_menu_uosc(menu.type, menu.title, message, menu.footnote, menu.cmd, name)
+        else
+            show_message(message, 3)
+        end
+        return
+    end
+
     if class == "dy" then
-        title = query_tmdb(name, "moive", menu)
+        title = query_tmdb(name, "movie", menu)
     else
         title = query_tmdb(name, "tv", menu)
     end
@@ -322,9 +329,9 @@ mp.register_script_message("get-extra-event", function(cat, id, playlink, source
         else
             playlink = playlink:gsub("%?bsource=360ogvys$","")
         end
-        danmaku.anime = title .. " (" .. year .. ")"
-        danmaku.episode = "电影"
-        danmaku.source = source_id
+        DANMAKU.anime = title .. " (" .. year .. ")"
+        DANMAKU.episode = "电影"
+        DANMAKU.source = source_id
         write_history()
         add_danmaku_source(playlink, true)
     else
