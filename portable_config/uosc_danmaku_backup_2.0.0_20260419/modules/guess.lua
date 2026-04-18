@@ -1,5 +1,3 @@
-local unpack = unpack or table.unpack
-
 -- Clean up media name
 local function clean_name(name)
     return name:gsub("^%[.-%]", " ")
