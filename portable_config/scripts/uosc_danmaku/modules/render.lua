@@ -185,8 +185,27 @@ function hide_danmaku_func()
     end
 end
 
-local message_overlay = mp.create_osd_overlay('ass-events')
-local message_timer = mp.add_timeout(3, function()
+local message_overlay, message_timer
+
+function reset_danmaku_runtime_state()
+    COMMENTS, DELAY = nil, 0
+    stop_time_observer()
+    overlay:remove()
+    if message_timer then
+        message_timer:kill()
+    end
+    if message_overlay then
+        message_overlay:remove()
+    end
+    mp.set_property_native(DELAY_PROPERTY, 0)
+    mp.set_property_bool(HAS_DANMAKU, false)
+    if filter_state("danmaku") then
+        mp.commandv("vf", "remove", "@danmaku")
+    end
+end
+
+message_overlay = mp.create_osd_overlay('ass-events')
+message_timer = mp.add_timeout(3, function()
     message_overlay:remove()
 end, true)
 
@@ -233,13 +252,7 @@ mp.register_event('playback-restart', function(event)
 end)
 
 mp.add_hook("on_unload", 50, function()
-    COMMENTS, DELAY = nil, 0
-    stop_time_observer()
-    overlay:remove()
-    mp.set_property_native(DELAY_PROPERTY, 0)
-    if filter_state("danmaku") then
-        mp.commandv("vf", "remove", "@danmaku")
-    end
+    reset_danmaku_runtime_state()
 
     local files_to_remove = {
         file1 = utils.join_path(DANMAKU_PATH, "temp-" .. PID .. ".mp4"),

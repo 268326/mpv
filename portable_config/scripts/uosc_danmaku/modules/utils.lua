@@ -336,6 +336,58 @@ function remove_query(url)
     end
 end
 
+local function same_media_path(path1, path2)
+    if not path1 or not path2 then
+        return false
+    end
+    if path1 == path2 then
+        return true
+    end
+    if is_protocol(path1) or is_protocol(path2) then
+        return remove_query(path1) == remove_query(path2)
+    end
+    return false
+end
+
+function get_current_playlist_title(path)
+    path = path or mp.get_property("path")
+    local playlist = mp.get_property_native("playlist")
+    if type(playlist) ~= "table" then
+        return nil
+    end
+
+    local playlist_pos = mp.get_property_number("playlist-pos", -1)
+    if playlist_pos and playlist_pos >= 0 then
+        local current = playlist[playlist_pos + 1]
+        if type(current) == "table"
+        and same_media_path(current.filename, path)
+        and current.title and current.title ~= "" then
+            return current.title
+        end
+    end
+
+    for _, entry in ipairs(playlist) do
+        if type(entry) == "table"
+        and (entry.current or entry.playing or same_media_path(entry.filename, path))
+        and entry.title and entry.title ~= "" then
+            return entry.title
+        end
+    end
+
+    return nil
+end
+
+function get_current_playback_title(path)
+    path = path or mp.get_property("path")
+    if path and is_protocol(path) then
+        local playlist_title = get_current_playlist_title(path)
+        if playlist_title and playlist_title ~= "" then
+            return playlist_title
+        end
+    end
+    return url_decode(mp.get_property("media-title"))
+end
+
 function file_exists(path)
     if path then
         local meta = utils.file_info(path)
@@ -573,10 +625,28 @@ function get_parent_directory(path)
     return dir
 end
 
+function get_filename_no_ext(path)
+    if not path then
+        return nil
+    end
+
+    if is_protocol(path) then
+        return mp.get_property("filename/no-ext")
+    end
+
+    path = normalize(path)
+    local _, filename = utils.split_path(path)
+    if not filename or filename == "" then
+        return nil
+    end
+
+    return filename:gsub("%.[^%.\\/]+$", "")
+end
+
 -- 获取播放文件标题信息
 function parse_title()
     local path = mp.get_property("path")
-    local filename = mp.get_property("filename/no-ext")
+    local filename = get_filename_no_ext(path)
 
     if not filename then
         return

@@ -342,7 +342,7 @@ function write_history(episodeid, api_server)
     local history = {}
     local path = mp.get_property("path")
     local dir = get_parent_directory(path)
-    local fname = mp.get_property('filename/no-ext')
+    local fname = get_filename_no_ext(path)
     local episodeNumber = 0
     if episodeid then
         episodeNumber = tonumber(episodeid) % 1000
@@ -352,14 +352,16 @@ function write_history(episodeid, api_server)
 
     if is_protocol(path) then
         local title, season_num, episod_num = parse_title()
-        if title and episod_num then
+        local playback_title = get_current_playback_title(path)
+        local playback_episode_number = playback_title and get_episode_number(playback_title)
+        if title and (episod_num or playback_episode_number) then
             if season_num then
                 dir = title .." Season".. season_num
             else
                 dir = title
             end
-            fname = url_decode(mp.get_property("media-title"))
-            episodeNumber = episod_num
+            fname = playback_title or url_decode(mp.get_property("media-title"))
+            episodeNumber = playback_episode_number or episod_num or episodeNumber
         end
     end
 
@@ -536,7 +538,7 @@ end
 function save_danmaku(not_forced)
     local path = mp.get_property("path")
     local dir = get_parent_directory(path) or ""
-    local filename = mp.get_property('filename/no-ext')
+    local filename = get_filename_no_ext(path)
     local danmaku_out = utils.join_path(dir, filename .. ".xml")
     -- 排除网络播放场景
     if not path or is_protocol(path) or (not file_exists(danmaku_out)
@@ -743,12 +745,11 @@ function load_danmaku_for_url(path)
     end
 
     local title, season_num, episod_num = parse_title()
-    local filename = url_decode(mp.get_property("media-title"))
-    local episod_number = nil
-    if title and episod_num then
+    local filename = get_current_playback_title(path) or url_decode(mp.get_property("media-title"))
+    local episod_number = filename and get_episode_number(filename) or episod_num
+    if title and episod_number then
         if season_num then
             dir = title .." Season".. season_num
-            episod_number = episod_num
         else
             dir = title
         end
@@ -819,7 +820,7 @@ end
 function init(path)
     if not path then return end
     local dir = get_parent_directory(path)
-    local filename = mp.get_property('filename/no-ext')
+    local filename = get_filename_no_ext(path)
     local video = mp.get_property_native("current-tracks/video")
     local duration = mp.get_property_number("duration", 0)
     if not video or video["image"] or video["albumart"] or duration < 60 then
@@ -843,13 +844,16 @@ end
 mp.register_event("file-loaded", function()
     local path = mp.get_property("path")
     local dir = get_parent_directory(path)
-    local filename = mp.get_property('filename/no-ext')
+    local filename = get_filename_no_ext(path)
     local video = mp.get_property_native("current-tracks/video")
     local fps = mp.get_property_number("container-fps", 0)
     local duration = mp.get_property_number("duration", 0)
     if not video or video["image"] or video["albumart"] or fps < 23 or duration < 60 then
         return
     end
+
+    reset_danmaku_runtime_state()
+    DANMAKU = {sources = {}, count = 1}
 
     read_danmaku_source_record(path)
 
